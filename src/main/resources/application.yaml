@@ -1,0 +1,14 @@
+spring:
+  r2dbc:
+    url: r2dbc:mariadb://localhost:3306/minikode
+    username: root
+    password: '!biobio3730@'
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        r2dbc:
+          core:
+            DefaultDatabaseClient: DEBUG
