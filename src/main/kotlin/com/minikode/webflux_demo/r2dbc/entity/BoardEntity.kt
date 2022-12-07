@@ -1,6 +1,7 @@
 package com.minikode.webflux_demo.r2dbc.entity
 
 import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
 import org.springframework.data.relational.core.mapping.Column
 import org.springframework.data.relational.core.mapping.Table
 import java.util.*
@@ -9,6 +10,7 @@ import java.util.*
     name = "board",
     schema = "minikode"
 )
+@Document(collection="list")
 class BoardEntity(
     title: String,
     description: String,

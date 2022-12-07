@@ -3,6 +3,14 @@ spring:
     url: r2dbc:mariadb://localhost:3306/minikode
     username: root
     password: '!biobio3730@'
+  data:
+    mongodb:
+      database: 'webflux'
+#      username:
+#      password:
+      host: localhost
+      port: 27017
+
 
 logging:
   level:

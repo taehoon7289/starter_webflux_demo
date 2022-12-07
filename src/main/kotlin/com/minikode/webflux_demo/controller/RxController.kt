@@ -1,6 +1,7 @@
 package com.minikode.webflux_demo.controller
 
 import com.minikode.webflux_demo.r2dbc.entity.BoardEntity
+import com.minikode.webflux_demo.mongo.entity.MemberEntity
 import com.minikode.webflux_demo.service.BoardService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -29,7 +30,7 @@ class RxController(
     }
 
     @GetMapping("/")
-    fun find(): ResponseEntity<Flux<BoardEntity>> {
+    fun find(): ResponseEntity<Mono<MutableList<BoardEntity>>> {
         return ResponseEntity.ok(boardService.findBoards())
     }
 }

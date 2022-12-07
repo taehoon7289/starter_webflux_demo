@@ -29,6 +29,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
@@ -36,9 +37,13 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-aop")
 
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+
     // https://mvnrepository.com/artifact/org.mariadb/r2dbc-mariadb
     implementation("org.mariadb:r2dbc-mariadb:1.1.2")
 
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
+
+    implementation("io.projectreactor.tools:blockhound:1.0.6.RELEASE")
 }
 
 tasks.withType<KotlinCompile> {

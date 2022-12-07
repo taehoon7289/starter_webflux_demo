@@ -11,6 +11,7 @@ import org.springframework.web.reactive.function.server.RouterFunctions
 import org.springframework.web.reactive.function.server.ServerResponse
 import java.util.concurrent.Executors
 import java.util.stream.Stream
+import kotlin.streams.toList
 
 @Configuration
 class RxHandler {

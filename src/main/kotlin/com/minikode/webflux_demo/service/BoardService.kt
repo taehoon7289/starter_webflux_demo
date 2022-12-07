@@ -3,7 +3,6 @@ package com.minikode.webflux_demo.service
 import com.minikode.webflux_demo.r2dbc.entity.BoardEntity
 import com.minikode.webflux_demo.r2dbc.repository.BoardRepository
 import org.springframework.stereotype.Service
-import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 @Service
@@ -19,7 +18,8 @@ class BoardService(
         return boardRepository.save(boardEntity)
     }
 
-    fun findBoards(): Flux<BoardEntity> {
-        return boardRepository.findAll()
+    fun findBoards(): Mono<MutableList<BoardEntity>> {
+        return boardRepository.findAll().collectList()
     }
+
 }
